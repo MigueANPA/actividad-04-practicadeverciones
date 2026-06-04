@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Programación Educativa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="container nav-container">
+        <div class="logo">Programación Educativa</div>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="about.html">Acerca de</a>
+            <a href="gallery.html">Galería</a>
+            <a href="contact.html">Contacto</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="hero">
+
+        <h1>Aprende Desarrollo Web y Programación</h1>
+
+        <p>
+            Descubre cursos y recursos educativos sobre HTML, CSS,
+            JavaScript, Python y Git para comenzar tu carrera en el
+            desarrollo de software.
+        </p>
+
+    </section>
+
+    <section class="carousel-section">
+        <div class="carousel">
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+                    <li class="carousel-slide current-slide">
+                        <img src="https://www.itmastersmag.com/wp-content/uploads/2021/01/shutterstock_1078387013-scaled.jpg" alt="Imagen de programación 1">
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="https://www.unir.net/wp-content/uploads/2024/02/La-importancia-de-la-programacion-segura-o-desarrollo-seguro-de-software.jpg" alt="Imagen de programación 2">
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="https://codigoonclick.com/wp-content/uploads/2018/02/mejores-lenguajes-de-programacion-2018-1080x675.jpg" alt="Imagen de programación 3">
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="https://dinahosting.com/blog/upload/2018/06/Control-de-versiones.jpg" alt="Imagen de control de versiones">
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoY5dahGetL9KMtzQF5zulh683uGwDA-O52g&s" alt="Imagen de control de versiones 2">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-card">
+
+        <h2>¿Qué encontrarás?</h2>
+
+        <ul class="feature-list">
+            <li><span class="feature-icon">💻</span>Cursos introductorios de programación.</li>
+            <li><span class="feature-icon">🧩</span>Contenido educativo organizado por tecnologías.</li>
+            <li><span class="feature-icon">✅</span>Buenas prácticas para desarrollo web.</li>
+            <li><span class="feature-icon">🌐</span>Información sobre Git y GitHub.</li>
+            <li><span class="feature-icon">🎓</span>Material para estudiantes principiantes.</li>
+        </ul>
+
+    </section>
+
+    <section class="section-card">
+
+        <h2>Cursos Destacados</h2>
+
+        <div class="grid">
+
+            <article class="card">
+                <div class="card-image">
+                    <img src="https://static.wixstatic.com/media/cae29b_583a314283924629ab7ede58d33ba4e2~mv2.jpg/v1/fill/w_1000,h_563,al_c,q_85,usm_0.66_1.00_0.01/cae29b_583a314283924629ab7ede58d33ba4e2~mv2.jpg" alt="Curso HTML y CSS">
+                </div>
+                <h3>HTML y CSS</h3>
+                <p>
+                    Aprende a crear páginas web modernas mediante
+                    estructuras semánticas y estilos profesionales.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-image">
+                    <img src="https://assets.pluhe.com/blog/small/JqxsAtj7G5bc4D8vfE5LKrGjLhm2dgYi7aRtEXBd.jpg" alt="Curso JavaScript">
+                </div>
+                <h3>JavaScript</h3>
+                <p>
+                    Añade interactividad y funcionalidades dinámicas
+                    a tus proyectos web.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="card-image">
+                    <img src="https://beecrowd.com/wp-content/uploads/2024/04/2022-07-19-Melhores-cursos-de-Python.jpg" alt="Curso Python">
+                </div>
+                <h3>Python</h3>
+                <p>
+                    Inicia en uno de los lenguajes más utilizados
+                    para programación y análisis de datos.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+    <section class="section-card">
+
+        <h2>¿Por qué aprender programación?</h2>
+
+        <p>
+            La programación es una de las habilidades más demandadas
+            actualmente. Permite desarrollar aplicaciones, sitios web,
+            automatizar tareas y crear soluciones tecnológicas para
+            diferentes industrias.
+        </p>
+
+        <p>
+            Aprender programación también fortalece el pensamiento lógico,
+            la creatividad y la resolución de problemas.
+        </p>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>Proyecto educativo de programación - Práctica de Versionamiento.</p>
+</footer>
+
+<script>
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+
+    const moveToSlide = (track, currentSlide, targetSlide) => {
+        track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+        currentSlide.classList.remove('current-slide');
+        targetSlide.classList.add('current-slide');
+    };
+
+    const updateSlidePositions = slides => {
+        slides.forEach((slide, index) => {
+            slide.style.left = slide.getBoundingClientRect().width * index + 'px';
+        });
+    };
+
+    const startAutoSlide = () => {
+        return setInterval(() => {
+            const currentSlide = track.querySelector('.current-slide');
+            const nextSlide = currentSlide.nextElementSibling || slides[0];
+            moveToSlide(track, currentSlide, nextSlide);
+        }, 3500);
+    };
+
+    window.addEventListener('load', () => {
+        updateSlidePositions(slides);
+        let autoSlideInterval = startAutoSlide();
+
+        window.addEventListener('resize', () => updateSlidePositions(slides));
+    });
+</script>
+</body>
+</html>
