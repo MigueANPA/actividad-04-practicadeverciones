@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="styles-contact.css">
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contacto</h1>
+            <p>¿Tienes dudas o problemas? Escríbenos, respondemos en menos de 24 horas.</p>
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section class="contact-section">
+        <div class="container contact-grid">
+
+            <!-- Información -->
+            <div class="contact-info">
+
+                <div class="info-card">
+                    <div class="info-icon">📧</div>
+                    <div>
+                        <div class="info-label">Correo electrónico</div>
+                        <div class="info-val">cursos@aprendetech.com</div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">📞</div>
+                    <div>
+                        <div class="info-label">Teléfono</div>
+                        <div class="info-val">+52 222 151 2569</div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">📍</div>
+                    <div>
+                        <div class="info-label">Ubicación</div>
+                        <div class="info-val">Izúcar de Matamoros</div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">🕒</div>
+                    <div>
+                        <div class="info-label">Horario de atención</div>
+                        <div class="info-val">Lun - Vie 9:00 - 17:00</div>
+                    </div>
+                </div>
+
+                <!-- Redes Sociales -->
+                <div class="social-links">
+                    <p>Síguenos en redes</p>
+
+                    <div class="social-row">
+                        <a href="#" class="social-btn"> Twitter</a>
+                        <a href="#" class="social-btn"> GitHub</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Formulario -->
+            <div class="contact-form">
+
+                <form>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" placeholder="Tu nombre completo">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="correo">Correo electrónico</label>
+                            <input type="email" id="correo" placeholder="correo@ejemplo.com">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="asunto">Asunto</label>
+                        <select id="asunto">
+                            <option>Selecciona un asunto</option>
+                            <option>Información sobre cursos</option>
+                            <option>Soporte técnico</option>
+                            <option>Colaboración</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" rows="5" placeholder="Escribe tu mensaje aquí"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary">
+                        Enviar mensaje
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
